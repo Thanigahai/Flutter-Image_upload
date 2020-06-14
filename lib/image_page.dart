@@ -56,7 +56,7 @@ class _ImagePageState extends State<ImagePage> {
 
   Future<void> _cropImage() async {
 
-    final cropped_image = await ImageCropper.cropImage(
+    final croppedImage = await ImageCropper.cropImage(
         compressFormat: ImageCompressFormat.jpg,
         compressQuality: 80,
         androidUiSettings: AndroidUiSettings(
@@ -74,7 +74,7 @@ class _ImagePageState extends State<ImagePage> {
         maxHeight: 512);
 
     setState(() {
-      _image = cropped_image ?? _image;
+      _image = croppedImage ?? _image;
       _startUpload();
     });
   }
